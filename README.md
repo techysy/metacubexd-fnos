@@ -20,9 +20,15 @@
 3. 桌面出现 **MetaCubeXD** 图标，点击打开面板（端口 9091）
 4. 面板自动连接 Mihomo API（默认 `http://192.168.31.31:9090`）
 
-## Mihomo API 地址
+## 应用设置 / App Settings
 
-编辑 `app/www/config.js` 中的 `defaultBackendURL` 修改 API 地址。
+安装后可在 **App Center → 应用设置** 中配置 Mihomo API 地址，无需手动改代码：
+
+| 设置项 | 默认值 | 说明 |
+|---|---|---|
+| Mihomo API 地址 | `http://192.168.31.31:9090` | Mihomo 的 external-controller 地址 |
+
+修改后需**重启应用**生效（App Center → 停止 → 启动）。
 
 ## 端口 / Port
 
