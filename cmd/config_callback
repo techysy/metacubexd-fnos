@@ -1,2 +1,9 @@
 #!/bin/bash
+# 应用设置保存时执行
+# wizard 字段值通过环境变量传入（无 wizard_ 前缀）
+APP_NAME="${TRIM_APPNAME:-metacubexd}"
+DATA_DIR="${TRIM_PKGVAR:-/vol4/@appdata/${APP_NAME}}"
+mkdir -p "${DATA_DIR}"
+echo "${mihomo_api:-http://192.168.31.31:9090}" > "${DATA_DIR}/mihomo_api"
+chmod 644 "${DATA_DIR}/mihomo_api"
 exit 0

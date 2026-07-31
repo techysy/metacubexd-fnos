@@ -18,13 +18,28 @@ PORT="${TRIM_SERVICE_PORT:-9091}"
 LOG="${DATA_DIR}/metacubexd.log"
 PID_FILE="${DATA_DIR}/metacubexd.pid"
 
+# 应用设置：读取 Mihomo API 地址并写入 config.js
+apply_config() {
+    local api_url
+    if [ -f "${DATA_DIR}/mihomo_api" ]; then
+        api_url=$(cat "${DATA_DIR}/mihomo_api" | tr -d '[:space:]')
+    else
+        api_url="http://192.168.31.31:9090"
+    fi
+    # 替换 config.js 中的 defaultBackendURL
+    if [ -f "${WWW_DIR}/config.js" ]; then
+        sed -i "s|defaultBackendURL: '[^']*'|defaultBackendURL: '${api_url}'|g" "${WWW_DIR}/config.js"
+        echo "[config] Mihomo API: ${api_url}" >> "${LOG}"
+    fi
+}
+
 start() {
     mkdir -p "${DATA_DIR}"
     if [ -f "${PID_FILE}" ] && kill -0 "$(cat "${PID_FILE}")" 2>/dev/null; then
         echo "already running (pid $(cat "${PID_FILE}"))"; return 0
     fi
+    apply_config
     cd "${WWW_DIR}"
-    # Python http.server（hash 路由，不需要 SPA fallback）
     nohup /usr/bin/python3 -m http.server "${PORT}" --bind 0.0.0.0 \
         --directory "${WWW_DIR}" >> "${LOG}" 2>&1 &
     echo $! > "${PID_FILE}"
