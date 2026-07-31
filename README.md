@@ -36,10 +36,6 @@
 - **Mihomo API**：9090
 - **Mihomo HTTP 代理**：7890
 
-## License
-
-MIT — 与 [metacubex/metacubexd](https://github.com/metacubex/metacubexd) 一致
-
 ## 🔮 Future / 迭代计划
 
 等待上游 [metacubex/metacubexd](https://github.com/metacubex/metacubexd) 发布新版本后重新打包：
@@ -49,3 +45,7 @@ MIT — 与 [metacubex/metacubexd](https://github.com/metacubex/metacubexd) 一�
 - 面板 UI/UX 优化
 
 > 📖 上游项目：[metacubex/metacubexd](https://github.com/metacubex/metacubexd) · [在线 Demo](https://metacubex.github.io/metacubexd/)
+
+## License
+
+MIT — 与 [metacubex/metacubexd](https://github.com/metacubex/metacubexd) 一致
