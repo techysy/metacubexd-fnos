@@ -1,0 +1,21 @@
+{
+    "data-share":
+    {
+        "shares": [
+            {
+                "name": "metacubexd",
+                "permission":
+                {
+                    "rw": ["metacubexd"]
+                }
+            },
+            {
+                "name": "metacubexd/data",
+                "permission":
+                {
+                    "rw": ["metacubexd"]
+                }
+            }
+        ]
+    }
+}

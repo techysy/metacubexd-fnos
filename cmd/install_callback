@@ -1,0 +1,3 @@
+#!/bin/bash
+mkdir -p "${TRIM_PKGVAR:-/vol4/@appdata/metacubexd}"
+exit 0

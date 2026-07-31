@@ -1,0 +1,12 @@
+appname               = metacubexd
+version               = 1.270.6
+display_name          = MetaCubeXD
+desc                  = Mihomo Dashboard - 代理面板，管理规则、节点、连接
+arch                  = x86_64
+source                = thirdparty
+maintainer            = yangyu
+distributor           = yangyu
+desktop_uidir         = ui
+desktop_applaunchname = metacubexd.Application
+service_port          = 9091
+ctl_stop              = true

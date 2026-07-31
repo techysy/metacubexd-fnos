@@ -1,0 +1,62 @@
+#!/bin/bash
+set -euo pipefail
+
+APP_NAME="${TRIM_APPNAME:-metacubexd}"
+APP_DIR="${TRIM_APPDEST:-/var/apps/${APP_NAME}}"
+DATA_DIR="${TRIM_PKGVAR:-${APP_DIR}/var}"
+
+# 兼容两种部署布局
+if [ -d "${APP_DIR}/www" ]; then
+    WWW_DIR="${APP_DIR}/www"
+elif [ -d "${APP_DIR}/target/www" ]; then
+    WWW_DIR="${APP_DIR}/target/www"
+else
+    echo "ERROR: www dir not found" >&2; exit 1
+fi
+
+PORT="${TRIM_SERVICE_PORT:-9091}"
+LOG="${DATA_DIR}/metacubexd.log"
+PID_FILE="${DATA_DIR}/metacubexd.pid"
+
+start() {
+    mkdir -p "${DATA_DIR}"
+    if [ -f "${PID_FILE}" ] && kill -0 "$(cat "${PID_FILE}")" 2>/dev/null; then
+        echo "already running (pid $(cat "${PID_FILE}"))"; return 0
+    fi
+    cd "${WWW_DIR}"
+    # Python http.server（hash 路由，不需要 SPA fallback）
+    nohup /usr/bin/python3 -m http.server "${PORT}" --bind 0.0.0.0 \
+        --directory "${WWW_DIR}" >> "${LOG}" 2>&1 &
+    echo $! > "${PID_FILE}"
+    for i in $(seq 1 10); do
+        if curl -sf "http://127.0.0.1:${PORT}/" >/dev/null 2>&1; then
+            echo "started (pid $(cat "${PID_FILE}"))"; return 0
+        fi
+        sleep 1
+    done
+    echo "started, health check timed out"; return 0
+}
+
+stop() {
+    if [ -f "${PID_FILE}" ]; then
+        kill "$(cat "${PID_FILE}")" 2>/dev/null || true
+        rm -f "${PID_FILE}"
+    fi
+    pkill -f "http.server.*${PORT}" 2>/dev/null || true
+    echo "stopped"
+}
+
+status() {
+    if [ -f "${PID_FILE}" ] && kill -0 "$(cat "${PID_FILE}")" 2>/dev/null; then
+        echo "running"; return 0
+    fi
+    echo "stopped"; return 1
+}
+
+case "${1:-start}" in
+    start) start ;;
+    stop) stop ;;
+    status) status ;;
+    restart) stop; sleep 1; start ;;
+    *) echo "Usage: $0 {start|stop|status|restart}"; exit 1 ;;
+esac

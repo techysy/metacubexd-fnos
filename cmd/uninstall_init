@@ -1,0 +1,5 @@
+#!/bin/bash
+if [ -f "${TRIM_PKGVAR:-/vol4/@appdata/metacubexd}/metacubexd.pid" ]; then
+    kill "$(cat "${TRIM_PKGVAR:-/vol4/@appdata/metacubexd}/metacubexd.pid")" 2>/dev/null || true
+fi
+exit 0
