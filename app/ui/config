@@ -3,7 +3,7 @@
         "metacubexd.Application": {
             "title": "MetaCubeXD",
             "icon": "images/icon_{0}.png",
-            "type": "iframe",
+            "type": "url",
             "protocol": "http",
             "port": "9091",
             "url": "/",
