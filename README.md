@@ -1,5 +1,10 @@
 # MetaCubeXD fnOS App
 
+[![GitHub release](https://img.shields.io/github/v/release/techysy/metacubexd-fnos?label=Latest&color=blue)](https://github.com/techysy/metacubexd-fnos/releases)
+[![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](https://github.com/techysy/metacubexd-fnos/blob/main/LICENSE)
+[![fnOS 1.1.31xx](https://img.shields.io/badge/fnOS-1.1.31xx+-orange.svg)](https://developer.fnnas.com/docs/guide)
+[![MetaCubeXD v1.270.6](https://img.shields.io/badge/MetaCubeXD-v1.270.6-purple.svg)](https://github.com/metacubex/metacubexd)
+
 > Mihomo Dashboard — 代理面板，管理规则、节点、连接。支持直连内网 Mihomo API。
 >
 > Mihomo Dashboard — manage rules, nodes, and connections. Connects directly to local Mihomo API.
