@@ -50,6 +50,7 @@
 
 - [Hermes WebUI](https://github.com/techysy/hermes-webui-fnos) — Hermes 相关 fnOS 应用（WebUI 浏览器访问）
 - [9Router](https://github.com/techysy/9router-fnos) — Hermes 相关 fnOS 应用（FREE AI 路由器 / API 代理）
+- [Strava Panel](https://github.com/techysy/strava-panel-fnos) — Hermes 相关 fnOS 应用（Strava 骑行数据面板）
 - [fnOS 开发者文档](https://developer.fnnas.com/docs/guide)
 
 ## License
