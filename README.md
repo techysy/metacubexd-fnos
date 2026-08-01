@@ -46,6 +46,12 @@
 
 > 📖 上游项目：[metacubex/metacubexd](https://github.com/metacubex/metacubexd) · [在线 Demo](https://metacubex.github.io/metacubexd/)
 
+## 相关链接 / Links
+
+- [Hermes WebUI](https://github.com/techysy/hermes-webui-fnos) — Hermes 相关 fnOS 应用（WebUI 浏览器访问）
+- [9Router](https://github.com/techysy/9router-fnos) — Hermes 相关 fnOS 应用（FREE AI 路由器 / API 代理）
+- [fnOS 开发者文档](https://developer.fnnas.com/docs/guide)
+
 ## License
 
 MIT — 与 [metacubex/metacubexd](https://github.com/metacubex/metacubexd) 一致
