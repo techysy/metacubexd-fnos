@@ -1,5 +1,5 @@
 appname               = metacubexd
-version               = 1.270.6
+version               = 1.271.0
 display_name          = MetaCubeXD
 desc                  = Mihomo Dashboard - 代理面板，管理规则、节点、连接
 arch                  = x86_64
