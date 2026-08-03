@@ -1,6 +1,7 @@
 # MetaCubeXD fnOS App
 
-[![GitHub release](https://img.shields.io/github/v/release/techysy/metacubexd-fnos?label=Latest&color=blue)](https://github.com/techysy/metacubexd-fnos/releases)
+[![GitHub release](https://img.shields.io/github/v/release/techysy/metacubexd-fnos?label=Release&color=blue)](https://github.com/techysy/metacubexd-fnos/releases)
+[![Downloads](https://img.shields.io/github/downloads/techysy/metacubexd-fnos/total?label=Downloads&color=green)](https://github.com/techysy/metacubexd-fnos/releases)
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](https://github.com/techysy/metacubexd-fnos/blob/main/LICENSE)
 [![fnOS 1.1.31xx](https://img.shields.io/badge/fnOS-1.1.31xx+-orange.svg)](https://developer.fnnas.com/docs/guide)
 [![MetaCubeXD v1.271.0](https://img.shields.io/badge/MetaCubeXD-v1.271.0-purple.svg)](https://github.com/metacubex/metacubexd)
