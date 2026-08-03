@@ -1,5 +1,10 @@
 # CHANGELOG
 
+## 2026-08-03 (文档更新)
+
+### 文档 / Docs
+- README 新增「远程访问注意事项」—— 通过 fnOS HTTPS 远程访问时面板连 HTTP Mihomo 被混合内容拦截；url 版不解决；提供局域网直连 / fnOS 桌面 Chrome / 公网 HTTPS 三种方案
+
 ## v1.271.0 (2026-08-01)
 
 ### 更新 / Update
