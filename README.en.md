@@ -6,7 +6,7 @@ Mihomo Dashboard — manage rules, nodes, and connections. Connects directly to 
 [![Downloads](https://img.shields.io/github/downloads/techysy/metacubexd-fnos/total?label=Downloads&color=green)](https://github.com/techysy/metacubexd-fnos/releases)
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](https://github.com/techysy/metacubexd-fnos/blob/main/LICENSE)
 [![fnOS 1.1.31xx](https://img.shields.io/badge/fnOS-1.1.31xx+-orange.svg)](https://developer.fnnas.com/docs/guide)
-[![MetaCubeXD v1.271.0](https://img.shields.io/badge/MetaCubeXD-v1.271.0-purple.svg)](https://github.com/metacubex/metacubexd)
+[![MetaCubeXD](https://img.shields.io/github/v/release/metacubex/metacubexd?label=MetaCubeXD&color=purple)](https://github.com/metacubex/metacubexd)
 
 > Packages [MetaCubeXD](https://github.com/metacubex/metacubexd) as a fnOS desktop window app.
 
