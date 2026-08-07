@@ -20,6 +20,10 @@ Mihomo Dashboard — 代理面板，管理规则、节点、连接，支持直�
 - 🔗 **直连内网 Mihomo API** — 无需额外服务
 - 📦 **一键部署** — App Center 手动安装即用
 
+> ### 💡 需要「Mihomo 内核 + 面板」完整版？
+> 本仓库是**纯面板**（需连接已有的 Mihomo API）。如需**内置 Mihomo 内核 + 面板**的集成应用，请看新版：
+> **▶️ [Mihomo Panel](https://github.com/techysy/mihomo-panel-fnos)**（`mihomo-panel-fnos`，含内核 mixed 7890 / Clash API 9090 + MetaCubeXD 面板，支持 x86_64 与 aarch64）
+
 ## 🚀 快速安装
 
 1. 从 [Releases](https://github.com/techysy/metacubexd-fnos/releases) 下载 `metacubexd-x.x.x.fpk`
